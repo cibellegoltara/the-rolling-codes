@@ -1,0 +1,238 @@
+:root {
+    --amarelo: #f9e75c;
+    --laranja: #ff8c42;
+    --vermelho: #e84855;
+    --roxo: #9b5de5;
+    --azul: #5dade2;
+    --verde: #2ecc71;
+    --rosa: #ff77a9;
+    --rosa-escuro: #c44569;
+    --ciano: #1abc9c;
+    --roxo-escuro: #6c3483;
+    --laranja-escuro: #e67e22;
+    --verde-claro: #b4dd1e;
+    --amarelo-escuro: #f1c40f;
+    --preto: #0a0a0a;
+    --branco: #fef9e7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: linear-gradient(45deg, 
+        var(--azul), 
+        var(--rosa), 
+        var(--laranja), 
+        var(--verde));
+    background-size: 400% 400%;
+    animation: psicodeliaFundo 12s ease infinite;
+    color: var(--preto);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes psicodeliaFundo {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+header {
+    background-color: var(--amarelo-escuro);
+    border: 8px double var(--roxo-escuro);
+    border-radius: 60px 20px 60px 20px;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 15px 15px 0 var(--vermelho),
+                -10px -10px 0 var(--ciano),
+                0 0 30px var(--amarelo);
+    transform: rotate(-1deg);
+    transition: all 0.3s;
+}
+
+header:hover {
+    transform: rotate(1deg) scale(1.02);
+    box-shadow: 20px 20px 0 var(--laranja-escuro),
+                -15px -15px 0 var(--rosa-escuro);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--preto);
+    text-shadow: 4px 4px 0 var(--rosa),
+                8px 8px 0 var(--amarelo),
+                12px 12px 0 var(--azul);
+    letter-spacing: 2px;
+    word-break: break-word;
+    animation: tituloPisca 2s infinite;
+}
+
+@keyframes tituloPisca {
+    0% { text-shadow: 4px 4px 0 var(--rosa), 8px 8px 0 var(--amarelo), 12px 12px 0 var(--azul); }
+    33% { text-shadow: 4px -4px 0 var(--verde), 8px -8px 0 var(--laranja), 12px -12px 0 var(--roxo); }
+    66% { text-shadow: -4px 4px 0 var(--ciano), -8px 8px 0 var(--vermelho), -12px 12px 0 var(--verde-claro); }
+    100% { text-shadow: 4px 4px 0 var(--rosa), 8px 8px 0 var(--amarelo), 12px 12px 0 var(--azul); }
+}
+
+header p {
+    font-size: 1.3rem;
+    color: var(--roxo-escuro);
+    background: var(--branco);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    border: 3px dotted var(--vermelho);
+}
+
+article {
+    background-color: var(--branco);
+    border-left: 15px solid;
+    border-right: 15px solid;
+    border-image: repeating-linear-gradient(45deg, 
+        var(--amarelo), 
+        var(--laranja), 
+        var(--vermelho), 
+        var(--roxo), 
+        var(--azul), 
+        var(--verde), 
+        var(--rosa)) 30;
+    border-radius: 80px 0 80px 0;
+    padding: 30px;
+    margin: 40px auto;
+    box-shadow: 20px 20px 0 var(--rosa-escuro),
+                -15px -15px 0 var(--ciano);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 900px;
+    width: 90%;
+}
+article h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--preto);
+    background: var(--amarelo-escuro);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 100px 30px 100px 30px;
+    border: 4px dashed var(--roxo-escuro);
+    text-shadow: 2px 2px 0 var(--verde);
+    transform: rotate(-2deg);
+    box-shadow: 8px 8px 0 var(--rosa);
+}
+
+article p {
+    font-size: 1.3rem;
+    color: var(--preto);
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 30px 5px 30px 5px;
+    border-left: 8px solid var(--laranja);
+    border-bottom: 8px solid var(--azul);
+    text-align: justify;
+    backdrop-filter: blur(2px);
+}
+
+article p:last-of-type {
+    margin-bottom: 0;
+}
+
+p::selection {
+    background: var(--rosa-escuro);
+    color: var(--preto);
+}
+
+footer {
+    background: var(--roxo-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    border-radius: 200px 200px 0 0;
+    border: 8px groove var(--amarelo-escuro);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    word-spacing: 8px;
+    animation: rodapePulse 3s infinite;
+}
+
+@keyframes rodapePulse {
+    0% { background-color: var(--roxo-escuro); }
+    25% { background-color: var(--vermelho); }
+    50% { background-color: var(--azul); }
+    75% { background-color: var(--verde); }
+    100% { background-color: var(--roxo-escuro); }
+}
+
+footer p {
+    margin: 0;
+    text-shadow: 2px 2px 0 var(--laranja), 4px 4px 0 var(--preto);
+}
+
+a {
+    color: var(--amarelo);
+    background: var(--preto);
+    padding: 2px 6px;
+    text-decoration: wavy underline var(--laranja);
+    font-weight: bold;
+    border-radius: 10px 0 10px 0;
+}
+
+a:hover {
+    background: var(--laranja-escuro);
+    color: var(--preto);
+    text-decoration: none;
+    border-radius: 0 10px 0 10px;
+}
+
+section{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 10px;
+    margin-top: 20px;
+
+    scroll-snap-type: x mandatory;
+}
+
+section img{
+    height: 220px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid var(--preto);
+
+    scroll-snap-align: center;
+
+    transition: transform .25s;
+}
+
+section img:hover{
+    transform: scale(1.05);
+}
+
+section::-webkit-scrollbar{
+    height: 10px;
+}
+
+section::-webkit-scrollbar-track{
+    background: var(--branco);
+}
+
+section::-webkit-scrollbar-thumb{
+    background: var(--roxo);
+    border-radius: 10px;
+}
