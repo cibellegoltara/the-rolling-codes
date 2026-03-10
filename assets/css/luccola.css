@@ -1,0 +1,177 @@
+:root{
+    --branco: #f2efe9;
+    --cinza: #d6d2cb;
+    --vermelho: #8b1e24;
+    --vermelho-escuro: #5a1317;
+    --couro: #2b2323;
+    --preto: #121212;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    background:var(--cinza);
+    color:var(--preto);
+    line-height:1.6;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:var(--couro);
+    color:var(--branco);
+    padding:50px 20px;
+    text-align:center;
+    border-bottom:6px solid var(--vermelho);
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1{
+    font-size:2.8rem;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+header p{
+    font-size:1.2rem;
+    color:#d6d2cb;
+}
+
+/* CONTAINER / ARTICLES */
+
+article{
+    background:white;
+    padding:40px;
+    margin:40px auto;
+    max-width:1200px;
+    border-left:6px solid var(--vermelho);
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+article h2{
+    font-size:2rem;
+    margin-bottom:15px;
+    color:var(--vermelho);
+}
+
+/* TEXTO */
+
+article p{
+    font-size:1.1rem;
+    margin:15px 0;
+    text-align:justify;
+}
+
+/* LISTAS */
+
+article ul{
+    margin:15px 0 15px 25px;
+}
+
+article li{
+    margin-bottom:8px;
+    line-height:1.5;
+}
+
+article li::marker{
+    color:var(--vermelho);
+    font-weight:bold;
+}
+
+/* GALERIA DE IMAGENS */
+
+section{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-top:20px;
+}
+
+section img{
+    height:220px;
+    border-radius:6px;
+    border:2px solid #ccc;
+    transition:transform .2s;
+}
+
+section img:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+    background:var(--couro);
+    color:var(--branco);
+    border-top:4px solid var(--vermelho);
+    font-size:0.95rem;
+}
+
+footer p{
+    opacity:0.9;
+}
+
+/* Imagens Ezio */
+
+.imagens_ezio{
+    margin-left:60px;
+    width:270px;
+    height:400px;
+}
+
+/* Imagens Roma */
+
+.imagens_roma{
+    margin:20px;
+    width:600px;
+    height:500px;
+}
+
+/* Imagens Personagens */
+
+.imagens_personagens{
+    margin:20px;
+    width:600px;
+    height:500px;
+}
+
+#eu{
+    margin-left:340px;
+    width:400px;
+    height:500px;
+}
+
+/* SCROLLBAR PERSONALIZADA */
+
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--cinza);
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--vermelho);
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--vermelho-escuro);
+}
+
+/* Scroll suave */
+
+html{
+    scroll-behavior:smooth;
+}
